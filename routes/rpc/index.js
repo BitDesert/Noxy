@@ -115,20 +115,22 @@ module.exports = async function (fastify, opts) {
     delete params.action
 
     if (action === 'work_generate') {
-      if (!config.allowWork) {
+      if (config.allowWork !== true) {
         reply.code(400)
         return {
           message: 'Work generation is disabled!'
         }
       }
 
-      var dpowresponse = axios.post('https://dpow.nanocenter.org/service/', {
-        hash: params.hash,
-        user: config.dpowUser,
-        api_key: config.dpowKey
-      })
+      if (config.dpowUser && config.dpowKey) {
+        var dpowresponse = axios.post('https://dpow.nanocenter.org/service/', {
+          hash: params.hash,
+          user: config.dpowUser,
+          api_key: config.dpowKey
+        })
 
-      return { work: dpowresponse.data.work }
+        return { work: dpowresponse.data.work }
+      }
     }
 
     var noderesponse = await client._send(action, params)
