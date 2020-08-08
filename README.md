@@ -1,5 +1,8 @@
 # Noxy
 
+[![Docker Build Status](https://img.shields.io/docker/build/bitdesert/noxy)](https://hub.docker.com/r/bitdesert/noxy)
+[![Docker Pulls](https://img.shields.io/docker/pulls/bitdesert/noxy)](https://hub.docker.com/r/bitdesert/noxy)
+
 ⚡ A super simple and fast Nano RPC proxy and relay
 
 ## Usage
