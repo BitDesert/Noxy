@@ -57,7 +57,5 @@ profile*
 *clinic*
 *flamegraph*
 
-# generated code
-*/**/*.js
-dist
+# environment
 .env
