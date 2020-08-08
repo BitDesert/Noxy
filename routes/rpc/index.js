@@ -61,6 +61,15 @@ const allowedActions = [
 ]
 
 module.exports = async function (fastify, opts) {
+  fastify.options('/', async function (request, reply) {
+    reply.headers({
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+    })
+
+    return 'POST'
+  })
+
   fastify.post('/', async function (request, reply) {
     reply.headers({
       'Access-Control-Allow-Origin': '*',
