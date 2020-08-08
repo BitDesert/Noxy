@@ -20,7 +20,7 @@ curl --location --request POST 'https://rpc.yourdomain.com/rpc' \
 ```
 version: '3.8'
 services:
-  server:
+  noxy:
     image: "bitdesert/noxy"
     restart: "unless-stopped"
     environment:
