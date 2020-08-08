@@ -1,0 +1,38 @@
+{
+  "name": "Noxy",
+  "version": "1.0.0",
+  "description": "⚡ A super simple and fast Nano RPC proxy and relay",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap test/**/*.test.js",
+    "start": "fastify start -l info app.js",
+    "dev": "fastify start -w -l info -P app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BitDesert/Noxy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BitDesert/Noxy/issues"
+  },
+  "homepage": "https://github.com/BitDesert/Noxy#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.0.0",
+    "fastify-autoload": "^3.0.2",
+    "fastify-cli": "^2.0.2",
+    "fastify-plugin": "^2.0.0",
+    "nano-node-rpc": "^0.3.1",
+    "rate-limiter-flexible": "^2.1.10"
+  },
+  "devDependencies": {
+    "tap": "^14.0.0"
+  }
+}
