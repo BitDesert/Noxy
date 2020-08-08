@@ -1,15 +1,17 @@
 {
-  "name": "Noxy",
-  "version": "1.0.0",
+  "name": "noxy",
+  "version": "0.0.1",
   "description": "⚡ A super simple and fast Nano RPC proxy and relay",
   "main": "app.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "pretest": "npm run lint",
     "test": "tap test/**/*.test.js",
     "start": "fastify start -l info app.js",
-    "dev": "fastify start -w -l info -P app.js"
+    "dev": "fastify start -w -l info -P app.js",
+    "lint": "eslint **/*.js --fix"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,12 @@
     "rate-limiter-flexible": "^2.1.10"
   },
   "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "tap": "^14.0.0"
   }
 }
